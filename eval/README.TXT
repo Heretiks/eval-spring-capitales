@@ -6,6 +6,7 @@ Prérequis :
 
 
 Il suffit d'exécuter la commande 'ddev start' pour démarrer l'environement, puis lancer GameApplication.
+(A savoir qu'il y a donc un .ddev à la racine, nécessaire pour le fonctionnement, il est en fichier caché sur github)
 
 
 /game/question : GET qui retourne le nom du pays pour lequel il faut trouver la capitale.
