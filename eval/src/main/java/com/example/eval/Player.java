@@ -11,7 +11,7 @@ public class Player {
     private Integer id;
 
     private String name;
-    private int score;
+    private Integer score;
 
     public Integer getId() {return id;}
     public void setId(Integer id) {this.id = id;}

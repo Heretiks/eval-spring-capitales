@@ -29,8 +29,8 @@ public class GameController {
     }
 
     @PostMapping("/response")
-    public ResponseEntity<Map<String, Object>> checkAnswer(@RequestParam String playerName, @RequestParam Integer id, @RequestParam String answer) {
-        Optional<Country> countryOptional = countryService.findById(id);
+    public ResponseEntity<Map<String, Object>> checkAnswer(@RequestParam String playerName, @RequestParam Integer idPays, @RequestParam String answer) {
+        Optional<Country> countryOptional = countryService.findById(idPays);
         Map<String, Object> response = new HashMap<>();
 
         if (!countryOptional.isPresent()) {
@@ -51,7 +51,7 @@ public class GameController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/score")
+    @PostMapping("/score")
     public ResponseEntity<Map<String, Object>> getScore(@RequestParam String playerName) {
         Map<String, Object> response = new HashMap<>();
         Optional<Player> playerOptional = playerService.findByName(playerName);
